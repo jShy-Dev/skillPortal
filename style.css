@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    font-size: 14px;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: #002714;
+    color: #fff;
+}
+
+header #particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .info-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 100vh;
+}
+
+header .info-text model-viewer{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    margin-bottom: 8%;
+    border: none;
+    opacity: 80%;
+}
+
+/*  --animate 3d object on hover--
+header .info-text model-viewer:hover{
+    animation: pulse 60s infinite;
+}
+*/
+
+header .info-text h1{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Ubuntu';
+    vertical-align: text-top;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+    margin-top: 8%;
+    opacity: 75%;
+    border-right: .15em solid transparent;
+    animation: typing 2s steps(50) 1s 1 normal both, 
+    blink-caret .60s step-end 3;
+}
+
+header .info-text h2{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Ubuntu';
+    vertical-align: text-top;
+    text-align:center;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+    opacity: 75%;
+    border-right: .15em solid transparent;
+    animation-fill-mode: forwards;
+    animation: typing 2s steps(50) 2s 1 normal both, 
+    blink-caret .60s step-end 5.3;
+}
+
+header .info-text h3{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Ubuntu';
+    vertical-align: text-top;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+    opacity: 75%;
+    border-right: .15em solid transparent;
+    animation-fill-mode: forwards;
+    animation: typing 2s steps(50) 3s 1 normal both, 
+    blink-caret .60s step-end 6.6;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0vw }
+    to { width: 24em }
+}
+
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255);}
+    100% { border-color: transparent }
+}
+
+header .info-text .scroll{
+    position:absolute ;
+    align-content: center;
+    bottom: 20%;
+    left: 50%;
+    color: #fff;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+}
+
+header .info-text .scroll:hover{
+    opacity: 0.7;
+}
+
+header .info-text .scroll::before{
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    animation:  pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100%{
+        opacity: 0;
+    }
+    15%, 45%{
+        opacity: 1;
+    }
+    60%{
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    position:sticky;
+    background-color: #64d4961a;
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    position:flex;
+    float:left;
+    color: #f2f2f2;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Ubuntu';
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    letter-spacing: .20em;
+    text-shadow: 0 0 50px #fff;
+    
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    color: #64d497;
+}
+
+#intro, #contact, #about, #projects{
+    background-color: #002714;
+    padding: 40px;
+}
+
+#intro .header,  #contact .header, #about .header, #projects .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#intro .header h1, #contact .header h1, #about .header h1, #projects .header h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#intro .header a, #contact .header a, #about .header a, #projects .header a{
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #00331a;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#intro .header a:hover, #contact .header a:hover, #about .header a:hover, #projects .header a:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+#intro .header button, #contact .header button, #about .header button, #projects .header button{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #00331a;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#intro .header button:hover, #contact .header button:hover, #about .header button:hover, #projects .header button:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+#intro .card, #contact .card, #about .card, #projects .card{
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #64d4961a;
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#intro .card:hover, #contact .card:hover, #about .card:hover, #projects .card:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+#intro .card img{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+#intro .card .info{
+    display: inline;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#intro .card .info h1{
+    display: inline;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+
+#intro .card .info h2{
+    display: inline;
+    color: #64d497;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Ubuntu';
+}
+
+#intro .card .info p{
+    display: flex;
+    max-width: 30vw;
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#contact .card .info h2{
+    color: white;
+    text-align: center;
+}
+
+#contact .card .info i{
+    color: #fff;
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 1.4rem;
+}
+
+#contact .card .info img{
+    color: #fff;
+    font-size: 3rem;
+    max-height: 70px;
+    margin-top: .3rem;
+    margin-bottom: 1.6rem;
+}
+
+#about .card .info p, #projects .card .info p{
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#about .card .info:hover, #projects .card .info:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+#about .feature-cards, #contact .feature-cards, #projects .feature-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#about .feature-cards .card, #projects .feature-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex: 1;
+    min-width: 300px;
+}
+
+#contact .feature-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 10;
+    max-width: 12vw;
+    max-height: 12vw;
+}
+
+#about .feature-cards .card .info i{
+    color: #fff;
+    font-size: 5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    margin-top: 0;
+}
+
+#contact .feature-cards .card .info i, #projects .feature-cards .card .info i{
+    color: #fff;
+    font-size: 5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#projects .feature-cards .card .info img{
+    border-radius: 5%;
+    padding-left: 20px;
+}
+
+#about .feature-cards .card .info b, #projects .feature-cards .card .info b{
+    font-size: 1.2rem;
+}
+
+#about .feature-cards .card .info h1, #projects .feature-cards .card .info h1{
+    text-align: center;
+}
+
+#about .card .info h1, #projects .info h1{
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+
+#about .card .info h2, #projects .card .info h2{
+    color: #64d497;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Ubuntu';
+}
+
+#about .card .info h3, #projects .card .info h3{
+    max-zoom: 100%;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+
+#about .feature-cards .card .info p, #projects .feature-cards .card .info p{
+    font-size: 1.1rem;
+    max-width: 50vmax;
+}
+
+#about .feature-cards .card .info .previewer, #projects .feature-cards .card .info .previewer{
+    align-content: right;
+}
+
+.scroll-top{
+    display: none;           /*remove this once button is needed*/
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00331a;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover{
+    border-color: #fff;
+    box-shadow: none;
+    animation: pulse 4s infinite;
+}
+
+.button{    
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #00331a;
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 275px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    padding-top: 3px;
+}
+
+.button:hover{
+    border-color: #fff;
+    box-shadow: none;
+    animation: pulse 4s infinite;
+}
+
+hr.rounded {
+    border-top: 2px solid #ccc;
+    border-radius: 1px;
+    max-width: 50vw;
+}
+
+@media screen and (max-width: 720px) {
+    header .info-text h1{
+        font-size: 4rem;
+    }
+    
+    header .info-text h3{
+        font-size: 1.1rem;
+    }
+    
+    #intro .card{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #intro .card img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+}
